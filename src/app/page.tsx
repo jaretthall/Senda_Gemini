@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
-import RealTimeOverviewDashboard from '@/components/dashboard/RealTimeOverviewDashboard';
+import OverviewDashboardPage from '@/components/dashboard/OverviewDashboardPage';
 import { useTheme } from '@/providers/ThemeProvider';
 
 export default function HomePage() {
@@ -37,7 +37,7 @@ export default function HomePage() {
           isSidebarOpen={isSidebarOpen}
         />
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-secondary-100 dark:bg-secondary-900 p-4 md:p-6 lg:p-8">
-          <RealTimeOverviewDashboard />
+          <OverviewDashboardPage />
         </main>
       </div>
     </div>
