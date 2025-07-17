@@ -1,0 +1,6 @@
+{
+  "name": "Senda - Behavioral Health Dashboard",
+  "description": "A web application for behavioral health caseload tracking and patient management, featuring an overview dashboard with summary cards, crisis patient tracking, task completion charts, and various data visualizations.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
