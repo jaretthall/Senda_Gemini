@@ -2,21 +2,13 @@
 import * as React from 'react';
 import Header from './components/layout/Header.tsx';
 import Sidebar from './components/layout/Sidebar.tsx';
-import OverviewDashboardPage from './components/dashboard/OverviewDashboardPage.tsx';
-import CalendarPage from './pages/CalendarPage.tsx';
-import BehavioralHealthPage from './pages/BehavioralHealthPage.tsx';
-import HealthNavigationPage from './pages/HealthNavigationPage.tsx';
-import NewPatientPage from './pages/NewPatientPage.tsx';
-import SettingsPage from './pages/SettingsPage.tsx';
-import LicensedProfessionalCounselingPage from './pages/LicensedProfessionalCounselingPage.tsx';
-import ProviderViewPage from './pages/ProviderViewPage.tsx';
-import AdministrationPage from './pages/AdministrationPage.tsx';
-import BillingDepartmentPage from './pages/BillingDepartmentPage.tsx';
-import CommunityResourcesPage from './pages/CommunityResourcesPage.tsx';
-import MensGroupPage from './pages/MensGroupPage.tsx';
 import { useDarkMode } from './hooks/useDarkMode.ts';
 
-const App: React.FC = () => {
+interface AppProps {
+  children: React.ReactNode;
+}
+
+const App: React.FC<AppProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
   const [isDarkMode, toggleDarkMode] = useDarkMode();
 
@@ -47,7 +39,7 @@ const App: React.FC = () => {
           isSidebarOpen={isSidebarOpen}
         />
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-secondary-100 dark:bg-secondary-900 p-4 md:p-6 lg:p-8">
-          {/* This App.tsx is not used in Next.js - routing is handled by the app directory */}
+          {children}
         </main>
       </div>
     </div>
