@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { UserCircleIcon, CogIcon, LogoutIcon, ChevronDownIcon } from './icons.tsx';
 import { MOCK_USER } from '../../constants.tsx';
 

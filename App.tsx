@@ -1,6 +1,5 @@
 
 import * as React from 'react';
-import { Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header.tsx';
 import Sidebar from './components/layout/Sidebar.tsx';
 import OverviewDashboardPage from './components/dashboard/OverviewDashboardPage.tsx';
@@ -48,20 +47,7 @@ const App: React.FC = () => {
           isSidebarOpen={isSidebarOpen}
         />
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-secondary-100 dark:bg-secondary-900 p-4 md:p-6 lg:p-8">
-          <Routes>
-            <Route path="/" element={<OverviewDashboardPage />} />
-            <Route path="/calendar" element={<CalendarPage />} />
-            <Route path="/behavioral-health" element={<BehavioralHealthPage />} />
-            <Route path="/health-navigation" element={<HealthNavigationPage />} />
-            <Route path="/new-patient" element={<NewPatientPage />} />
-            <Route path="/settings" element={<SettingsPage />} />
-            <Route path="/licensed-professional-counseling" element={<LicensedProfessionalCounselingPage />} />
-            <Route path="/provider-view" element={<ProviderViewPage />} />
-            <Route path="/administration" element={<AdministrationPage />} />
-            <Route path="/billing-department" element={<BillingDepartmentPage />} />
-            <Route path="/community-resources" element={<CommunityResourcesPage />} />
-            <Route path="/mens-group" element={<MensGroupPage />} />
-          </Routes>
+          {/* This App.tsx is not used in Next.js - routing is handled by the app directory */}
         </main>
       </div>
     </div>

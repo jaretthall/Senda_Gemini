@@ -1,6 +1,7 @@
 
 import * as React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { NavItem } from '../../types.ts';
 import { APP_NAME, FOOTER_LINKS, MOCK_USER } from '../../constants.tsx';
 import { 
@@ -37,8 +38,8 @@ interface SidebarProps {
 }
 
 const SidebarNavItem: React.FC<{ item: NavItem; isOpen: boolean }> = ({ item, isOpen }) => {
-  const location = useLocation();
-  const isActive = location.pathname === item.path;
+  const pathname = usePathname();
+  const isActive = pathname === item.path;
   const [isChildrenVisible, setIsChildrenVisible] = React.useState(false);
 
   const handleToggleChildren = (e: React.MouseEvent) => {
