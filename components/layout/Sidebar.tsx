@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { usePathname } from 'next/navigation';
 import { NavItem } from '../../types.ts';
 import { APP_NAME, FOOTER_LINKS, MOCK_USER } from '../../constants.tsx';
