@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import Sidebar from '@/components/layout/Sidebar';
-import Header from '@/components/layout/Header';
-import OverviewDashboardPage from '@/components/dashboard/OverviewDashboardPage';
-import { useTheme } from '@/providers/ThemeProvider';
+import Sidebar from '../../components/layout/Sidebar';
+import Header from '../../components/layout/Header';
+import OverviewDashboardPage from '../../components/dashboard/OverviewDashboardPage';
+import { useTheme } from '../../providers/ThemeProvider';
 
 export default function HomePage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
